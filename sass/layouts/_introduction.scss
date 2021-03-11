@@ -1,0 +1,142 @@
+.introduction {
+  background-color: #25262a;
+  min-height: 100vh;
+  padding: 5rem 10rem;
+  display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  &__left {
+    flex: 1;
+    // padding: 0 8rem;
+    // background-color: royalblue;
+    & > * {
+      //   background-color: sandybrown;
+      margin: 50px;
+    }
+  }
+  &__right {
+    color: $text-color;
+    flex: 1;
+    padding-left: 10rem;
+    padding-right: 5rem;
+    // padding: 10rem 0 0 0;
+    // background-color: saddlebrown;
+    display: flex;
+    flex: 1;
+    // align-items: stretch;
+
+    // justify-content: space-between;
+    flex-direction: column;
+    // align-items: flex-end;
+    // justify-content: start;
+
+    :first-child {
+      margin-top: 50px;
+    }
+    // :last-child {
+    //   margin-bottom: 70px;
+    // }
+    & > * {
+      // background-color: sandybrown;
+      margin: 10px;
+    }
+  }
+  &-title {
+    color: grey;
+    font-size: 1.4rem;
+  }
+
+  &-intro {
+    font-size: 5rem;
+    font-weight: 500;
+  }
+
+  &-quote {
+    font-size: 2.8rem;
+    font-weight: 400;
+    font-style: italic;
+    // padding-right: 20px;
+  }
+
+  &-detail {
+    // background-color: red;
+    color: grey;
+    font-size: 1.4rem;
+  }
+}
+
+.card__project {
+  padding: 20px;
+  display: flex;
+  background-color: #2d2e32;
+  //   height: 15rem;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+  &:hover &--left > &-title {
+    color: $green-light;
+  }
+
+  &:hover &--left > span {
+    padding-bottom: 2px;
+    // border-bottom: 2px white;
+    text-decoration: underline;
+  }
+
+  &--left {
+    // background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    & a {
+      text-transform: uppercase;
+      //   background-color: red;
+      text-decoration: none;
+      color: $text-color;
+      // border-bottom: 5px solid $green-light;
+    }
+
+    & > * {
+      margin: 1rem 10px;
+    }
+
+    & p {
+      text-transform: capitalize;
+      color: grey;
+      font-size: 1.2rem;
+    }
+
+    & span {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+  }
+  &--right {
+    display: flex;
+    flex-direction: row;
+    // background-color: slateblue;
+  }
+
+  &-title {
+    transition: all 0.2s;
+    color: $text-color;
+    font-size: 2rem;
+    font-style: bold;
+    font-weight: 500;
+  }
+}
+
+.icon-code {
+  height: 30px;
+  width: 30px;
+}
+
+.icon-container {
+  padding: 20px;
+  fill: $green-light;
+  // background-color: indigo;
+}

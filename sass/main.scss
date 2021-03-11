@@ -1,0 +1,19 @@
+/*
+primary: #060608
+primary-light: #2C364C
+brown-dark:#46432E
+text-color:#DDCEBB
+green-light:#23BE53
+yellow-dark:#DF9B49
+pink-dark:#894555
+*/
+
+@import "abstracts/variables";
+
+@import "base/base";
+
+@import "layouts/header";
+@import "layouts/introduction";
+@import "layouts/projects";
+@import "layouts/navigation";
+@import "layouts/contact";
