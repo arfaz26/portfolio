@@ -46,6 +46,7 @@
 .nav__tabs {
   display: flex;
   font-size: 1.5rem;
+  scroll-behavior: smooth;
 
   // background-color: royalblue;
   justify-content: space-between;
@@ -56,9 +57,10 @@
   // & > * {
   //   // background-color: yellowgreen;
   // }
-  :hover {
-    color: $green-light;
-  }
+  // :hover,
+  // :active {
+  //   color: $green-light;
+  // }
 
   :hover > * {
     color: $green-light;
@@ -99,12 +101,38 @@
   justify-content: center;
 
   &__title {
-    // margin: 5.5rem;
-    // background-color: red;
-    transition: all 0.3s;
-    // font-weight: 400;
-    // background-color: red;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $text-color;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $green-light;
+    }
+    // &:visited {
+    //   // color: $text-color;
+    //   color: $text-color;
+    // }
   }
+
+  // &__title:link {
+  //   text-decoration: none;
+  //   color: $text-color;
+  //   // color: white;
+  //   // margin: 5.5rem;
+  //   // color: $text-color;
+  //   // background-color: red;
+  //   transition: all 0.3s;
+  //   // font-weight: 400;
+  //   // background-color: red;
+  // }
+  // &__title:visited {
+  //   // color: $text-color;
+  //   color: $text-color;
+  // }
 }
 
 .icon-email {
@@ -374,4 +402,7 @@
   // object-fit: cover;
 }
 
+// .user-nav__title {
+// text-decoration: none;
+// }
 // **********************MAIN**********************

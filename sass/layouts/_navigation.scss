@@ -141,14 +141,18 @@
     }
 
     &__title {
-      color: inherit;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: 400;
+      &:link,
+      &:visited {
+        color: inherit;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 400;
 
-      transition: all 0.2s;
+        transition: all 0.2s;
+      }
 
-      &:hover {
+      &:hover,
+      &:active {
         color: $green-light;
       }
     }

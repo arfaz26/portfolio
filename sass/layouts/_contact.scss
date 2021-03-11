@@ -1,7 +1,33 @@
 .contact {
+  background-color: tan;
   height: 100vh;
   background-color: $primary;
   padding: 5rem 15rem;
-  //   display: ;
-  position: relative;
+
+  &--container {
+    display: flex;
+
+    .contact--info {
+      flex: 1;
+
+      .contact--icon-container {
+        display: flex;
+      }
+
+      background-color: tomato;
+      // display: flex;
+      // flex-direction: column;
+
+      .icon-contact {
+        background-color: tan;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    .contact--form {
+      flex: 1;
+      background-color: teal;
+    }
+  }
 }

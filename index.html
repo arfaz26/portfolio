@@ -11,15 +11,15 @@
     <title>Arfaz — Portfolio</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="header__nav">
         <div class="header__nav--user-name">
           <h2 class="name">Arfaz <span class="last-name">Chougule</span></h2>
         </div>
         <div class="nav__tabs">
-          <div class="user-nav__title">Home</div>
-          <div class="user-nav__title">Projects</div>
-          <div class="user-nav__title">Contact</div>
+          <a href="#header" class="user-nav__title">Home</a>
+          <a href="#project" class="user-nav__title">Projects</a>
+          <a href="#skills" class="user-nav__title">Skills</a>
           <div class="icon-box--linkedin">
             <svg class="social-nav__icon">
               <use xlink:href="img/sprite.svg#icon-linkedin"></use>
@@ -56,7 +56,7 @@
               and I love what I do.
             </div>
             <div class="content-left__chat">
-              <a href="#" class="btn-chat">Download resume !</a>
+              <a href="#" class="btn-chat">Download resume &downarrow;</a>
             </div>
           </div>
           <div class="content-left-down">
@@ -97,7 +97,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="introduction">
+      <section class="introduction" id="introduction">
         <div class="introduction__left">
           <div class="card__project">
             <div class="card__project--left">
@@ -145,75 +145,214 @@
         <div class="introduction__right">
           <p class="introduction-title">Introduce</p>
           <h3 class="introduction-intro">
-            Hello! I'm
-            <span class="name"
-              >Arfaz<br />
-              Chougule</span
-            >
+            I'm
+            <span class="name">Arfaz Chougule</span>
           </h3>
-          <h4 class="introduction-quote">
+          <!-- <h4 class="introduction-quote">
             Every great design begin with an even better story
-          </h4>
+          </h4> -->
           <p class="introduction-detail">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-            suscipit! Sit vero, doloribus corrupti a neque veniam rem voluptas
-            dolorum provident quod voluptatem itaque. Nam nisi tempora
-            voluptatem repellendus eum.
+            Open for new opportunity to show case my skills in an challengeing
+            environment. i am energetic, ambitious person who has developed a
+            mature responsible approach to any task that i undertake or
+            situation that i am presented with.
           </p>
+
+          <div class="info">
+            <p>
+              <span class="info--tag">Date of birth</span>
+              <span class="info--value">26 November 1998</span>
+            </p>
+            <p>
+              <span class="info--tag">Contact</span>
+              <span class="info--value">+91-9029324494</span>
+            </p>
+            <p>
+              <span class="info--tag">Email</span>
+              <span class="info--value">chougulearfaz@gmail.com</span>
+            </p>
+            <p>
+              <span class="info--tag">Spoken languages</span>
+              <span class="info--value">English, Hindi, Marathi and Urdu</span>
+            </p>
+            <p>
+              <span class="info--tag">Nationality</span>
+              <span class="info--value">Indian</span>
+            </p>
+            <p>
+              <span class="info--tag">Interest</span>
+              <span class="info--value">Chess, Music, Travel</span>
+            </p>
+          </div>
         </div>
       </section>
-      <!-- <section class="project">
-        <h3>My Projects</h3>
-        <div class="project__container">
-          <div class="slide">
-            <div class="slide-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-              molestiae soluta error impedit fugit, tempore architecto
-            </div>
-            <div class="slide-image">
-              <img
-                class="slide-image--image"
-                src="/img/omni-food.jpeg"
-                alt="omni-food"
-              />
-            </div>
-            <div class="slide-title">Food Delivery website</div>
-          </div>
+      <section class="skills" id="skills">
+        <h3 class="section--skills-title">Education & skills</h3>
+        <div class="container">
+          <div class="container--left">
+            <div class="timeline_wrapper">
+              <div class="item">
+                <p>2004-2014</p>
+                <p>S.S.C</p>
+                <p>Maharashtra State Board</p>
+              </div>
 
-          <div class="slide">
-            <div class="slide-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-              molestiae soluta error impedit fugit, tempore architecto
+              <div class="item">
+                <p>2014-2018</p>
+                <p>Diploma in Information Technology</p>
+                <p>M.S.B.T.E</p>
+              </div>
+
+              <div class="item">
+                <p>2018-2021</p>
+                <p>B.E (IT)</p>
+                <p>Mumbai University</p>
+              </div>
             </div>
-            <div class="slide-image">
-              <img
-                class="slide-image--image"
-                src="/img/omni-food.jpeg"
-                alt="omni-food"
-              />
-            </div>
-            <div class="slide-title">Food Delivery website</div>
           </div>
-          <div class="slide" id="third">
-            <div class="slide-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-              molestiae soluta error impedit fugit, tempore architecto
+          <div class="container--right">
+            <div class="skills-container">
+              <p>html5</p>
             </div>
-            <div class="slide-image">
-              <img
-                class="slide-image--image"
-                src="/img/omni-food.jpeg"
-                alt="omni-food"
-              />
+
+            <div class="skills-container">
+              <p>css3</p>
             </div>
-            <div class="slide-title">Food Delivery website</div>
+
+            <div class="skills-container">
+              <p>Javascript</p>
+            </div>
+
+            <div class="skills-container">
+              <p>Python</p>
+            </div>
+
+            <div class="skills-container">
+              <p>React</p>
+            </div>
+
+            <div class="skills-container">
+              <p>sass</p>
+            </div>
+
+            <div class="skills-container">
+              <p>flutter</p>
+            </div>
+
+            <div class="skills-container">
+              <p>Node-js</p>
+            </div>
+
+            <div class="skills-container">
+              <p>MongoDB</p>
+            </div>
+
+            <div class="skills-container">
+              <p>Express</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project" id="project">
+        <h3 class="project--title">Latest works</h3>
+        <div class="project-container container--1">
+          <div class="project-container--top">
+            <div class="project-title">natours</div>
+            <div class="project-tags">
+              <h5 class="tag">Html</h5>
+              <h5 class="tag">css</h5>
+              <h5 class="tag">nodejs</h5>
+            </div>
+          </div>
+          <div class="project-container--bottom bottom--1">
+            <img
+              class="project-image img--1"
+              src="img/natours.jpeg"
+              alt="img"
+            />
+          </div>
+        </div>
+
+        <div class="project-container container--2">
+          <div class="project-container--top">
+            <div class="project-title">Bankist</div>
+            <div class="project-tags">
+              <h5 class="tag">Html</h5>
+              <h5 class="tag">css</h5>
+              <h5 class="tag">Javascript</h5>
+            </div>
+          </div>
+          <div class="project-container--bottom">
+            <img class="project-image img--2" src="img/bankist.jpeg" alt="" />
+          </div>
+        </div>
+
+        <div class="project-container container--3">
+          <div class="project-container--top">
+            <div class="project-title">Mapty</div>
+            <div class="project-tags">
+              <h5 class="tag">Html</h5>
+              <h5 class="tag">css</h5>
+              <h5 class="tag">Javascript</h5>
+            </div>
+          </div>
+          <div class="project-container--bottom">
+            <img class="project-image img--3" src="img/mapty.jpeg" alt="" />
+          </div>
+        </div>
+
+        <a href="#" class="project--all-projects"
+          >All Projects <span>&rightarrow;</span></a
+        >
+        <h5 class="all-project--description">
+          *All of my projects are available on my github profile
+        </h5>
+      </section>
+
+      <!-- <section class="contact">
+        <h3 class="contact--title">Contact Me</h3>
+        <div class="contact--container">
+          <div class="contact--info">
+            <div class="contact--icon-container">
+              <svg class="icon-contact">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <h5>+919029324494</h5>
+            </div>
+
+            <div class="contact--icon-container">
+              <svg class="icon-contact">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+              <h5>chougulearfaz@gmail.com</h5>
+            </div>
+
+            <div class="contact--icon-container">
+              <svg class="icon-contact">
+                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+              </svg>
+              <h5>Mumbai,IN</h5>
+            </div>
+          </div>
+          <div class="contact--form">
+            <form action="#">
+              <div class="name-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="email-container">
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+              </div>
+
+              <div class="message-container">
+                <label for="message">Message</label>
+                <textarea id="message" cols="30" rows="5"></textarea>
+              </div>
+            </form>
           </div>
         </div>
       </section> -->
-
-      <section class="contact">
-        <form action="#"></form>
-      </section>
     </main>
     <footer class="footer">
       <div class="footer__top">
@@ -229,9 +368,9 @@
           <div class="email">chougulearfaz@gmail.com</div>
 
           <div class="footer-nav">
-            <a href="#" class="footer-nav__title">Home</a>
-            <a href="#" class="footer-nav__title">Projects</a>
-            <a href="#" class="footer-nav__title">Contact</a>
+            <a href="#header" class="footer-nav__title">Home</a>
+            <a href="#project" class="footer-nav__title">Projects</a>
+            <a href="#skills" class="footer-nav__title">Skills</a>
           </div>
         </div>
       </div>
