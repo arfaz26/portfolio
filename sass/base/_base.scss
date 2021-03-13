@@ -3,16 +3,47 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%; //1rem =10px/16px = 62.5%
   scroll-behavior: smooth;
+  font-size: 62.5%; //1rem =10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 43.75%;
+  }
+
+  @include respond(mid-big-desktop) {
+    font-size: 68.75%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
   font-family: "Open Sans", Helvetica Neue;
   //   background-color: rgba($primary-light, 0.8);
+  background-color: #25262a;
+}
+// "Jura"
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section {
+  transition: all 0.3s;
 }

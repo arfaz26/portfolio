@@ -1,12 +1,19 @@
 .header {
   padding: 0 10rem;
+  // overflow: hidden;
   padding-top: 3rem;
-  height: 100vh;
+  // height: 100vh;
   // background-color: green;
   background-color: $primary;
   display: flex;
   flex-direction: column;
   color: $text-color;
+
+  @include respond(tab-port) {
+    // height: auto;
+    // padding: 1rem 15rem;
+    padding: 0;
+  }
 
   &__nav {
     // background-color: green;
@@ -32,6 +39,15 @@
       font-size: 2.3rem;
       font-weight: 700;
 
+      @include respond(tab-port) {
+        // position: fixed;
+        margin: 3rem 5rem;
+      }
+
+      @include respond(phone) {
+        margin-top: 4.5rem;
+      }
+
       &:hover {
         color: $green-light;
       }
@@ -45,14 +61,18 @@
 
 .nav__tabs {
   display: flex;
-  font-size: 1.5rem;
-  scroll-behavior: smooth;
-
+  font-size: 1.7rem;
+  // scroll-behavior: smooth;
   // background-color: royalblue;
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
   font-weight: 600;
+
+  @include respond(tab-port) {
+    // position: fixed;
+    display: none;
+  }
 
   // & > * {
   //   // background-color: yellowgreen;
@@ -174,9 +194,18 @@
 .header__content {
   display: flex;
   // justify-content: center;
+
+  // @include respond(phone) {
+  //   flex-direction: column;
+  // }
 }
 
 .content {
+  // flex-direction: column;
+
+  // @include respond(phone) {
+  //   flex-direction: column;
+  // }
   &-left {
     padding-top: 15rem;
     // background-color: lightcoral;
@@ -186,6 +215,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-port) {
+      // position: fixed;
+      margin: 3rem 5rem;
+    }
+
+    @include respond(phone-cut) {
+      padding-top: 8rem;
+    }
+
+    &__image {
+      height: 40rem;
+      width: 40rem;
+      // background-color: red;
+      display: none;
+      border-radius: 50%;
+
+      background-image: url("/img/groot.png");
+      background-size: cover;
+      @include respond(phone-cut) {
+        display: flex;
+      }
+    }
+
     // &:not(:last-child) {
     //   margin-bottom: 10rem;
     // }
@@ -256,8 +309,19 @@
   }
   &-right {
     flex: 1;
+
     // background-color: white;
     padding-top: 5rem;
+
+    @include respond(tab-port) {
+      margin: 3rem 5rem;
+      // flex
+      // order: -1;
+    }
+    @include respond(phone-cut) {
+      display: none;
+    }
+
     // display: flex;
     // flex-direction: column;
     // align-items: center;
@@ -313,6 +377,7 @@
   background-color: $green-light;
   font-size: 1.2rem;
   font-weight: 600;
+  // border
   border: 2px solid transparent;
   transition: all 0.3s;
   margin: 2px;
@@ -330,11 +395,16 @@
   // transition: all 0.3s;
 }
 .background-circle {
+  // background-color: blue;
   &__wrapper {
     // filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 1s));
     // box-shadow: 0 0 20px 20px black;
     // height: 40rem;
     // filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+    // @include respond(phone) {
+    //   display: none;
+    // }
+    position: relative;
   }
   display: flex;
   justify-content: center;
@@ -343,15 +413,29 @@
   background-image: linear-gradient(to right, #29282d, $primary);
   // background-color: #29282d;
   clip-path: circle();
+
+  @include respond(phone) {
+    overflow: hidden;
+    clip-path: none;
+    width: 40rem;
+    border-radius: 50%;
+  }
   // box-shadow: ;
+
+  @include respond(phone-cut) {
+    height: 30rem;
+  }
 }
 .dot-circle {
-  z-index: 1000;
+  z-index: 900;
   width: 3rem;
   height: 3rem;
   background-color: #25262a;
   // background-color: red;
   clip-path: circle();
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .language-icon {
@@ -368,17 +452,63 @@
   &-flutter {
     width: 10rem;
     height: 10rem;
-    top: -27%;
-    right: -15%;
+    position: absolute;
+    top: 25rem;
+    left: 7rem;
+    // top: -27%;
+    // right: -15%;
+
+    // @include respond(big-desktop) {
+    //   top: -25%;
+    // }
+
+    // @include respond(mid-big-desktop) {
+    //   top: -25%;
+    //   right: -25;
+    // }
+
+    @include respond(tab-port) {
+      // top: -20%;
+      left: 0;
+    }
+
+    @include respond(tab-port-cut) {
+      // top: -20%;
+      left: 0;
+    }
+
+    // @include respond(tab-port) {
+    //   right: -4%;
+    //   display: none;
+    // }
   }
 
   &-nodejs {
+    position: absolute;
     width: 10rem;
     height: 10rem;
-    top: -37%;
-    right: -65%;
+    top: 25rem;
+    left: 40rem; // right: 10rem;
+
+    @include respond(tab-port) {
+      // top: -20%;
+      left: 32rem;
+    }
+    @include respond(tab-port-cut) {
+      // top: -20%;
+      top: 27rem;
+      left: 32rem;
+    }
+
+    // top: -37%;
+    // right: -65%;
     // // right: -40rem;
     // left: 10rem;
+
+    // @include respond(tab-port) {
+    //   top: -35%;
+    //   display: none;
+    // }
   }
 
   // &-react {
@@ -406,3 +536,16 @@
 // text-decoration: none;
 // }
 // **********************MAIN**********************
+
+.social-link {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  &:hover,
+  &:active {
+    color: $green-light;
+  }
+}

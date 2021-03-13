@@ -1,16 +1,34 @@
 .footer {
-  height: 50vh;
+  // height: 50vh;
+  // overflow: hidden;
+  // background-color: chocolate;
   background-color: #25262a;
   display: flex;
   flex-direction: column;
   //   padding: 5rem;
   padding: 5rem 10rem;
 
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
   &__top {
     flex: 1;
     // background-color: royalblue;
     display: flex;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin: 3rem 5rem;
+      // justify-content: center;
+      align-items: stretch;
+      // margin-bottom: 3rem;
+      // & > * {
+      //   // background-color: darkgreen;
+      // }
+    }
     &--left {
+      // background-color: chocolate;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -18,6 +36,11 @@
       justify-content: center;
       // align-items: center;
       color: $text-color;
+
+      @include respond(tab-port) {
+        padding: 0;
+        margin-bottom: 3rem;
+      }
 
       & h4 {
         font-size: 3.2rem;
@@ -32,11 +55,22 @@
       // background-color: sandybrown;
     }
     &--right {
+      // background-color: crimson;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: flex-start;
       padding: 0 2rem;
+
+      @include respond(tab-port) {
+        padding: 0;
+        // background-color: red;
+
+        // margin-bottom: 13rem;
+        & > * {
+          margin-bottom: 2rem;
+        }
+      }
 
       & .title {
         font-size: 1.3rem;
@@ -46,6 +80,11 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         color: grey;
+
+        @include respond(tab-port) {
+          font-weight: 500;
+          // color: $text-color;
+        }
       }
       & .email {
         color: $text-color;
@@ -58,16 +97,27 @@
   &__bottom {
     flex: 0.4;
     // background-color: saddlebrown;
+    // background-color: #25262a;
 
     display: flex;
-
+    margin-top: 2rem;
     &--left {
+      // background-color: darkorchid;
       padding: 0 2rem;
       flex: 1;
       display: flex;
       color: $text-color;
       align-items: center;
+      // background-color: #25262a;
+
       // background-color: lavenderblush;
+      @include respond(tab-port) {
+        flex-direction: column;
+        padding-bottom: 2rem;
+        // justify-content: center;
+        // align-items: center;
+        // align-items: center;
+      }
 
       .my-name {
         // display: flex;
@@ -76,6 +126,17 @@
         font-weight: 700;
         transition: all 0.3s;
         // align-items: center;
+
+        @include respond(tab-port) {
+          margin-bottom: 2rem;
+
+          &::before {
+            content: "Build with ❤️ by ";
+            font-weight: 400;
+            color: grey;
+            // background-color: #25262a;
+          }
+        }
 
         &:hover {
           color: $green-light;
@@ -100,6 +161,7 @@
     }
 
     &--right {
+      // background-color: darkgreen;
       padding: 0 2rem;
       flex: 0.6;
       // background-color: lightcoral;
@@ -108,6 +170,12 @@
       // justify-content: space-evenly;
       :not(:first-child) {
         margin-left: 5rem;
+      }
+
+      @include respond(tab-port) {
+        display: none;
+        // background-color: red;
+        // visibility: hidden;
       }
     }
   }
@@ -130,14 +198,24 @@
   }
 
   &-nav {
+    // background-color: darkgoldenrod;
     display: flex;
     flex-direction: column;
     color: $text-color;
     padding: 0 5px;
     font-weight: 600;
+    // flex: 1;
 
     :not(:last-child) {
       margin-bottom: 1rem;
+    }
+
+    @include respond(tab-port) {
+      // background-color: darkblue;
+      // flex-direction: row;
+      display: none;
+      // justify-items: end;
+      // align-items: center;
     }
 
     &__title {
@@ -158,6 +236,11 @@
     }
   }
 }
+
+// .copyright {
+//   background-color: red;
+//   padding: 0;
+// }
 
 // display: flex;
 // justify-content: center;

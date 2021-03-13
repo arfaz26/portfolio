@@ -8,9 +8,48 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Arfaz — Portfolio</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#header" class="navigation__link">Home</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="#project" class="navigation__link">projects</a>
+          </li>
+
+          <!-- <li class="navigation__item">
+            <a href="#skills" class="navigation__link">skills</a>
+          </li> -->
+          <li class="navigation__item">
+            <a href="#skills" class="navigation__link">skills</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- <div class="language-icon icon-circle-flutter">
+            <svg class="icon-flutter">
+              <use xlink:href="img/sprite.svg#icon-flutter"></use>
+            </svg>
+          </div>
+          <div class="language-icon icon-circle-nodejs">
+            <svg class="icon-nodejs">
+              <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
+            </svg>
+          </div> -->
+
     <header class="header" id="header">
       <nav class="header__nav">
         <div class="header__nav--user-name">
@@ -20,43 +59,65 @@
           <a href="#header" class="user-nav__title">Home</a>
           <a href="#project" class="user-nav__title">Projects</a>
           <a href="#skills" class="user-nav__title">Skills</a>
-          <div class="icon-box--linkedin">
+          <a
+            href="https://www.linkedin.com/in/arfaz26"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="icon-box--linkedin">
+              <svg class="social-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+              </svg>
+              <span class="social-nav__title">LinkedIn</span>
+            </div>
+          </a>
+          <!-- <div class="icon-box--linkedin">
             <svg class="social-nav__icon">
               <use xlink:href="img/sprite.svg#icon-linkedin"></use>
             </svg>
             <span class="social-nav__title">LinkedIn</span>
-          </div>
-          <div class="icon-box--github">
-            <svg class="social-nav__icon">
-              <use xlink:href="img/sprite.svg#icon-github"></use>
-            </svg>
-            <span class="social-nav__title">Github</span>
-          </div>
-          <div class="icon-box--email">
-            <div class="container__icon-email">
-              <svg class="social-nav__icon icon-email">
-                <use xlink:href="img/sprite.svg#icon-mail"></use>
+          </div> -->
+
+          <a
+            href="https://github.com/arfaz26"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="icon-box--github">
+              <svg class="social-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-github"></use>
               </svg>
+              <span class="social-nav__title">Github</span>
             </div>
-          </div>
+          </a>
         </div>
       </nav>
       <div class="header__content">
         <div class="content-left">
           <div class="content-left-up">
-            <div class="content-left__designation">
-              <div class="dev">Full-Stack Developer</div>
-            </div>
-            <div class="content-left__message">
-              Talk is cheap.<br />
-              Show me the code
-            </div>
-            <div class="content-left__description">
-              I design and code beautifully simple things,<br />
-              and I love what I do.
-            </div>
-            <div class="content-left__chat">
-              <a href="#" class="btn-chat">Download resume &downarrow;</a>
+            <div class="left--up--content">
+              <div class="content-left__designation">
+                <div class="dev" id="dev">Full-Stack Developer</div>
+              </div>
+
+              <div class="content-left__image"></div>
+
+              <div class="content-left__message">
+                Talk is cheap.<br />
+                Show me the code
+              </div>
+              <div class="content-left__description">
+                I design and code beautifully simple things,<br />
+                and I love what I do.
+              </div>
+              <div class="content-left__chat">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1VEkH3y4m-fBKkLHaVN-R1kNr99Xk-EPw/view?usp=sharing"
+                  class="btn-chat"
+                  >Download resume &downarrow;</a
+                >
+              </div>
             </div>
           </div>
           <div class="content-left-down">
@@ -68,7 +129,7 @@
               </div>
             </div>
             <div class="project-completed">
-              <h2>10</h2>
+              <h2>25</h2>
               <div class="text">
                 projects<br />
                 done
@@ -82,22 +143,22 @@
             <div class="background-circle">
               <img src="img/groot.png" class="user-photo" alt="user-photo" />
             </div>
-          </div>
-          <div class="language-icon icon-circle-flutter">
-            <svg class="icon-flutter">
-              <use xlink:href="img/sprite.svg#icon-flutter"></use>
-            </svg>
-          </div>
-          <div class="language-icon icon-circle-nodejs">
-            <svg class="icon-nodejs">
-              <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
-            </svg>
+            <div class="language-icon icon-circle-flutter">
+              <svg class="icon-flutter">
+                <use xlink:href="img/sprite.svg#icon-flutter"></use>
+              </svg>
+            </div>
+            <div class="language-icon icon-circle-nodejs">
+              <svg class="icon-nodejs">
+                <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="introduction" id="introduction">
+      <section class="section introduction" id="introduction">
         <div class="introduction__left">
           <div class="card__project">
             <div class="card__project--left">
@@ -148,9 +209,6 @@
             I'm
             <span class="name">Arfaz Chougule</span>
           </h3>
-          <!-- <h4 class="introduction-quote">
-            Every great design begin with an even better story
-          </h4> -->
           <p class="introduction-detail">
             Open for new opportunity to show case my skills in an challengeing
             environment. i am energetic, ambitious person who has developed a
@@ -186,7 +244,7 @@
           </div>
         </div>
       </section>
-      <section class="skills" id="skills">
+      <section class="section skills" id="skills">
         <h3 class="section--skills-title">Education & skills</h3>
         <div class="container">
           <div class="container--left">
@@ -228,6 +286,10 @@
             </div>
 
             <div class="skills-container">
+              <p>Java</p>
+            </div>
+
+            <div class="skills-container">
               <p>React</p>
             </div>
 
@@ -253,112 +315,81 @@
           </div>
         </div>
       </section>
-      <section class="project" id="project">
-        <h3 class="project--title">Latest works</h3>
-        <div class="project-container container--1">
-          <div class="project-container--top">
-            <div class="project-title">natours</div>
-            <div class="project-tags">
-              <h5 class="tag">Html</h5>
-              <h5 class="tag">css</h5>
-              <h5 class="tag">nodejs</h5>
+      <section class="section project" id="project">
+        <div class="project__container">
+          <h3 class="project--title">Latest works</h3>
+          <div class="project-container container--1">
+            <div class="project-container--top">
+              <div class="project-title">natours</div>
+              <div class="project-tags">
+                <h5 class="tag">Html</h5>
+                <h5 class="tag">css</h5>
+                <h5 class="tag">nodejs</h5>
+              </div>
+            </div>
+            <div class="project-container--bottom bottom--1">
+              <img
+                class="project-image img--1"
+                src="img/natours.jpeg"
+                alt="img"
+              />
             </div>
           </div>
-          <div class="project-container--bottom bottom--1">
-            <img
-              class="project-image img--1"
-              src="img/natours.jpeg"
-              alt="img"
-            />
-          </div>
-        </div>
 
-        <div class="project-container container--2">
-          <div class="project-container--top">
-            <div class="project-title">Bankist</div>
-            <div class="project-tags">
-              <h5 class="tag">Html</h5>
-              <h5 class="tag">css</h5>
-              <h5 class="tag">Javascript</h5>
+          <div class="project-container container--2">
+            <div class="project-container--top">
+              <div class="project-title">Bankist</div>
+              <div class="project-tags">
+                <h5 class="tag">Html</h5>
+                <h5 class="tag">css</h5>
+                <h5 class="tag">Javascript</h5>
+              </div>
+            </div>
+            <div class="project-container--bottom">
+              <img class="project-image img--2" src="img/bankist.jpeg" alt="" />
             </div>
           </div>
-          <div class="project-container--bottom">
-            <img class="project-image img--2" src="img/bankist.jpeg" alt="" />
-          </div>
-        </div>
 
-        <div class="project-container container--3">
-          <div class="project-container--top">
-            <div class="project-title">Mapty</div>
-            <div class="project-tags">
-              <h5 class="tag">Html</h5>
-              <h5 class="tag">css</h5>
-              <h5 class="tag">Javascript</h5>
+          <div class="project-container container--3">
+            <div class="project-container--top">
+              <div class="project-title">Mapty</div>
+              <div class="project-tags">
+                <h5 class="tag">Html</h5>
+                <h5 class="tag">css</h5>
+                <h5 class="tag">Javascript</h5>
+              </div>
+            </div>
+            <div class="project-container--bottom">
+              <img class="project-image img--3" src="img/mapty.jpeg" alt="" />
             </div>
           </div>
-          <div class="project-container--bottom">
-            <img class="project-image img--3" src="img/mapty.jpeg" alt="" />
+          <div class="project--all-projects">
+            <a
+              target="_blank"
+              href="https://github.com/arfaz26"
+              class="project--all-projects"
+              >All Projects <span>&rightarrow;</span></a
+            >
           </div>
-        </div>
 
-        <a href="#" class="project--all-projects"
-          >All Projects <span>&rightarrow;</span></a
-        >
-        <h5 class="all-project--description">
-          *All of my projects are available on my github profile
-        </h5>
+          <h5 class="all-project--description">
+            *All of my projects are available on my github profile
+          </h5>
+        </div>
       </section>
-
-      <!-- <section class="contact">
-        <h3 class="contact--title">Contact Me</h3>
-        <div class="contact--container">
-          <div class="contact--info">
-            <div class="contact--icon-container">
-              <svg class="icon-contact">
-                <use xlink:href="img/sprite.svg#icon-phone"></use>
-              </svg>
-              <h5>+919029324494</h5>
-            </div>
-
-            <div class="contact--icon-container">
-              <svg class="icon-contact">
-                <use xlink:href="img/sprite.svg#icon-mail"></use>
-              </svg>
-              <h5>chougulearfaz@gmail.com</h5>
-            </div>
-
-            <div class="contact--icon-container">
-              <svg class="icon-contact">
-                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <h5>Mumbai,IN</h5>
-            </div>
-          </div>
-          <div class="contact--form">
-            <form action="#">
-              <div class="name-container">
-                <label for="name">Name</label>
-                <input type="text" id="name" />
-              </div>
-              <div class="email-container">
-                <label for="email">Email</label>
-                <input type="text" id="email" />
-              </div>
-
-              <div class="message-container">
-                <label for="message">Message</label>
-                <textarea id="message" cols="30" rows="5"></textarea>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section> -->
     </main>
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__top--left">
           <h4>Let's make something amazing together.</h4>
-          <h4>Start by <a href="#">Saying Hi!</a></h4>
+          <h4>
+            Start by
+            <a
+              href="https://api.whatsapp.com/send?phone=+919029324494&text=Hey%20there"
+              target="_blank"
+              >Saying Hi!</a
+            >
+          </h4>
         </div>
         <div class="footer__top--right">
           <div class="title">Information</div>
@@ -377,7 +408,7 @@
       <div class="footer__bottom">
         <div class="footer__bottom--left">
           <h2 class="my-name">Arfaz <span class="last-name">Chougule</span></h2>
-          <h5>&copy; 2021. All Right Reserved</h5>
+          <h5 class="copyright">&copy; 2021. All Right Reserved</h5>
         </div>
         <div class="footer__bottom--right">
           <div class="nav__icon-container">
@@ -403,5 +434,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>

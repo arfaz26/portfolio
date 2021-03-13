@@ -1,15 +1,36 @@
 .skills {
   height: 100vh;
+  // width: 100%;
+  // background-color: crimson;
   background-color: #25262a;
   padding: 5rem 15rem;
   //   display: flex;
 
+  @include respond(tab-port) {
+    height: auto;
+    // padding: 1rem 15rem;
+    padding: 0;
+  }
   .container {
     display: flex;
-    padding-top: 5rem;
+    // overflow: hidden;
+    // padding-top: 5rem;
     // background-color: royalblue;
+    @include respond(tab-port) {
+      flex-direction: column;
+      // padding: 0 3rem;
+    }
     &--left {
       flex: 1;
+      @include respond(tab-port) {
+        // margin-bottom: 2rem;
+        // margin-left: 5rem;
+        // margin-right: 5rem;
+        // margin-top: 4rem;
+        margin: 3rem 5rem;
+
+        // background-color: cadetblue;
+      }
 
       .timeline_wrapper {
         // background-color: greenyellow;
@@ -50,19 +71,40 @@
       flex: 1;
       //   background-color: salmon;
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(5, 1fr);
-      justify-items: center;
+      // justify-content: start;
+      justify-items: start;
+      // background-color: brown;
       //   justify-content: end;
       //   align-items: flex-end;
 
       gap: 30px;
 
+      // @include respond(tab-land) {
+      //   justify-items: start;
+      //   // gap: 1px;
+      // }
+
+      @include respond(tab-port) {
+        // margin: 50px;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+      }
+
       .skills-container {
-        // border: 3px solid red;s
+        // background-color: blue;
+        // border: 3px solid red;
         // clip-path: polygon(0 0, 0 0, 0 0, 0 0);
         // text-align: center;
         p {
+          // background-color: blue;
+
           color: $text-color;
           //   color: $green-light;
 
@@ -83,11 +125,19 @@
 }
 
 .section--skills-title {
-  //   background-color: lawngreen;
+  // background-color: lawngreen;
   margin-bottom: 5rem;
   text-transform: uppercase;
   color: $text-color;
   font-size: 3rem;
   font-weight: 500;
   text-transform: uppercase;
+
+  @include respond(tab-port) {
+    padding-top: 5rem;
+    // background-color: burlywood;
+    margin-bottom: 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
