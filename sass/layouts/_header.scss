@@ -232,7 +232,8 @@
       display: none;
       border-radius: 50%;
 
-      background-image: url("img/user-old.png");
+      background-image: url("../../img/user-old.png");
+      // background-image: url("img/user-old.png");
       // filter: opacity(0.5);
       filter: brightness(0.6);
 
@@ -400,7 +401,9 @@
 .background-circle {
   height: inherit;
   width: inherit;
-  background-image: url("img/user-old.png");
+  background-image: url("../../img/user-old.png");
+
+  // background-image: url("img/user-old.png");
   // filter: hue-rotate();
   filter: brightness(0.6);
   background-size: cover;
