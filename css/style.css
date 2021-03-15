@@ -441,6 +441,12 @@ body {
 .social-link:hover, .social-link:active {
   color: #12993d; }
 
+.user-profile {
+  padding-top: 30px;
+  border-radius: 50%;
+  height: inherit;
+  width: inherit; }
+
 .introduction {
   background-color: #25262a;
   min-height: 100vh;

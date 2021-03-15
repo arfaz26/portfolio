@@ -403,10 +403,13 @@
   width: inherit;
   // background-image: url('');
   // background-image: url("./img/user-old.png");
-  background-image: url("../img/user-old.png");
+  // background-image: url("![](./img/user-old.png");
 
-  // background-image: url("img/user-old.png");
+  background-image: url("../img/user-old.png");
   // filter: hue-rotate();
+  // overflow: hidden;
+  // object-fit: contain;
+
   filter: brightness(0.6);
   background-size: cover;
   border-radius: 50%;
@@ -604,4 +607,16 @@
   &:active {
     color: $green-light;
   }
+}
+
+.user-profile {
+  padding-top: 30px;
+  // height: 40rem;
+  // width: 40rem;
+  // background-image: linear-gradient(to right, #29282d, $primary);
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+  // overflow: hidden;
+  // background-color: lawngreen;
 }
