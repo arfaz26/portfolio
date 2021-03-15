@@ -232,7 +232,10 @@
       display: none;
       border-radius: 50%;
 
-      background-image: url("/img/groot.png");
+      background-image: url("/img/user-old.png");
+      // filter: opacity(0.5);
+      filter: brightness(0.6);
+
       background-size: cover;
       @include respond(phone-cut) {
         display: flex;
@@ -395,6 +398,13 @@
   // transition: all 0.3s;
 }
 .background-circle {
+  height: inherit;
+  width: inherit;
+  background-image: url("/img/user-old.png");
+  // filter: hue-rotate();
+  filter: brightness(0.6);
+  background-size: cover;
+  border-radius: 50%;
   // background-color: blue;
   &__wrapper {
     // filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 1s));
@@ -404,15 +414,35 @@
     // @include respond(phone) {
     //   display: none;
     // }
-    position: relative;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    width: 40rem;
+    background-image: linear-gradient(to right, #29282d, $primary);
+    border-radius: 50%;
+
+    // background-color: red;
+    // background-image: url(/img/natours.jpeg);
+    // background-size: contain;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40rem;
-  background-image: linear-gradient(to right, #29282d, $primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // position: absolute;
+  // overflow: hidden;
+  // background-size: cover;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: 40rem;
+  // width: 40rem;
+  // border-radius: 50%;
+  // background-image: linear-gradient(to right, #29282d, $primary);
   // background-color: #29282d;
-  clip-path: circle();
+  // clip-path: circle();
 
   @include respond(phone) {
     overflow: hidden;
@@ -453,8 +483,10 @@
     width: 10rem;
     height: 10rem;
     position: absolute;
-    top: 25rem;
-    left: 7rem;
+    top: 60%;
+    left: -10%;
+    // top: 25rem;
+    // left: 7rem;
     // top: -27%;
     // right: -15%;
 
@@ -467,15 +499,15 @@
     //   right: -25;
     // }
 
-    @include respond(tab-port) {
-      // top: -20%;
-      left: 0;
-    }
+    // @include respond(tab-port) {
+    //   // top: -20%;
+    //   left: 0;
+    // }
 
-    @include respond(tab-port-cut) {
-      // top: -20%;
-      left: 0;
-    }
+    // @include respond(tab-port-cut) {
+    //   // top: -20%;
+    //   left: 0;
+    // }
 
     // @include respond(tab-port) {
     //   right: -4%;
@@ -483,22 +515,40 @@
     // }
   }
 
+  &-react {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 20%;
+    // left: ;
+    right: 4%;
+
+    @include respond(tab-port) {
+      width: 6rem;
+      height: 6rem;
+    }
+    // top: 60%;
+    // left: -10%;
+  }
+
   &-nodejs {
     position: absolute;
     width: 10rem;
     height: 10rem;
-    top: 25rem;
-    left: 40rem; // right: 10rem;
+    top: 65%;
+    right: 5%;
+    // top: 25rem;
+    // left: 40rem; // right: 10rem;
 
-    @include respond(tab-port) {
-      // top: -20%;
-      left: 32rem;
-    }
-    @include respond(tab-port-cut) {
-      // top: -20%;
-      top: 27rem;
-      left: 32rem;
-    }
+    // @include respond(tab-port) {
+    //   // top: -20%;
+    //   left: 32rem;
+    // }
+    // @include respond(tab-port-cut) {
+    //   // top: -20%;
+    //   top: 27rem;
+    //   left: 32rem;
+    // }
 
     // top: -37%;
     // right: -65%;
@@ -528,6 +578,7 @@
 }
 
 .user-photo {
+  // height: 100%;
   height: 400px;
   // object-fit: cover;
 }

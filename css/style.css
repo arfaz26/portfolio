@@ -100,6 +100,7 @@ body {
     right: 0;
     z-index: 1500;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .navigation__list {
     position: absolute;
@@ -128,7 +129,8 @@ body {
     transform: scale(160); }
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-    width: 100%; }
+    width: 100%;
+    visibility: visible; }
   .navigation__icon {
     position: relative;
     margin-top: 3.5rem; }
@@ -261,7 +263,8 @@ body {
     width: 40rem;
     display: none;
     border-radius: 50%;
-    background-image: url("/img/groot.png");
+    background-image: url("/img/user-old.png");
+    filter: brightness(0.6);
     background-size: cover; }
     @media (max-width: 46.87em) {
       .content-left__image {
@@ -356,14 +359,25 @@ body {
   transition: all 0.2s; }
 
 .background-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40rem;
-  background-image: linear-gradient(to right, #29282d, #2d2e32);
-  clip-path: circle(); }
+  height: inherit;
+  width: inherit;
+  background-image: url("/img/user-old.png");
+  filter: brightness(0.6);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
   .background-circle__wrapper {
-    position: relative; }
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    width: 40rem;
+    background-image: linear-gradient(to right, #29282d, #2d2e32);
+    border-radius: 50%; }
   @media (max-width: 37.5em) {
     .background-circle {
       overflow: hidden;
@@ -396,28 +410,26 @@ body {
   width: 10rem;
   height: 10rem;
   position: absolute;
-  top: 25rem;
-  left: 7rem; }
+  top: 60%;
+  left: -10%; }
+
+.icon-circle-react {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 20%;
+  right: 4%; }
   @media (max-width: 56.25em) {
-    .icon-circle-flutter {
-      left: 0; } }
-  @media (max-width: 69.37em) {
-    .icon-circle-flutter {
-      left: 0; } }
+    .icon-circle-react {
+      width: 6rem;
+      height: 6rem; } }
 
 .icon-circle-nodejs {
   position: absolute;
   width: 10rem;
   height: 10rem;
-  top: 25rem;
-  left: 40rem; }
-  @media (max-width: 56.25em) {
-    .icon-circle-nodejs {
-      left: 32rem; } }
-  @media (max-width: 69.37em) {
-    .icon-circle-nodejs {
-      top: 27rem;
-      left: 32rem; } }
+  top: 65%;
+  right: 5%; }
 
 .user-photo {
   height: 400px; }
@@ -730,22 +742,23 @@ body {
       flex: 0.6; }
       @media (max-width: 56.25em) {
         .footer__top--right {
-          padding: 0; }
-          .footer__top--right > * {
-            margin-bottom: 2rem; } }
+          padding: 0; } }
       .footer__top--right .title {
         font-size: 1.3rem;
-        color: grey; }
+        color: grey;
+        margin-bottom: 1rem; }
       .footer__top--right .address {
         font-size: 1.5rem;
         text-transform: uppercase;
-        color: grey; }
+        color: grey;
+        margin-bottom: 1rem; }
         @media (max-width: 56.25em) {
           .footer__top--right .address {
             font-weight: 500; } }
       .footer__top--right .email {
         color: #ddcebb;
-        font-size: 2rem; }
+        font-size: 2rem;
+        margin-bottom: 1rem; }
   .footer__bottom {
     flex: 0.4;
     display: flex;

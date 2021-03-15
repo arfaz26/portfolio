@@ -67,19 +67,22 @@
         // background-color: red;
 
         // margin-bottom: 13rem;
-        & > * {
-          margin-bottom: 2rem;
-        }
+        // & > * {
+        //   margin-bottom: 10rem;
+        // }
       }
 
       & .title {
+        // background-color: blue;
         font-size: 1.3rem;
         color: grey;
+        margin-bottom: 1rem;
       }
       & .address {
         font-size: 1.5rem;
         text-transform: uppercase;
         color: grey;
+        margin-bottom: 1rem;
 
         @include respond(tab-port) {
           font-weight: 500;
@@ -89,6 +92,7 @@
       & .email {
         color: $text-color;
         font-size: 2rem;
+        margin-bottom: 1rem;
       }
       flex: 0.6;
       // background-color: seagreen;
@@ -171,6 +175,10 @@
       :not(:first-child) {
         margin-left: 5rem;
       }
+
+      // & > * {
+      //   margin-bottom: 1rem;
+      // }
 
       @include respond(tab-port) {
         display: none;

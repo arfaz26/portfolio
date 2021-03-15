@@ -27,7 +27,7 @@ const devFuntion = function () {
     a.style.color = "#12993d";
   }
 };
-setInterval(devFuntion, 1000);
+setInterval(devFuntion, 800);
 
 const allSections = document.querySelectorAll(".section");
 
