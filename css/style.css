@@ -626,11 +626,11 @@ body {
     grid-column: 1/2;
     color: #12993d;
     font-size: 3rem; }
-    .project--all-projects span {
-      opacity: 0;
-      transition: all 0.2s; }
-    .project--all-projects:hover span {
-      opacity: 1; }
+    .project--all-projects a {
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s; }
+      .project--all-projects a:hover {
+        border-bottom: 3px solid #12993d; }
     @media (max-width: 37.5em) {
       .project--all-projects {
         grid-row: 5/6;

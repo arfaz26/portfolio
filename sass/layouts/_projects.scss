@@ -109,16 +109,24 @@
     color: $green-light;
     font-size: 3rem;
 
-    span {
-      // display: none;
-      opacity: 0;
-      transition: all 0.2s;
+    & a {
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+      &:hover {
+        border-bottom: 3px solid $green-light;
+      }
     }
 
-    &:hover span {
-      // display: ;
-      opacity: 1;
-    }
+    // span {
+    //   // display: none;
+    //   opacity: 0;
+    //   transition: all 0.2s;
+    // }
+
+    // &:hover span {
+    //   // display: ;
+    //   opacity: 1;
+    // }
 
     @include respond(phone) {
       grid-row: 5/6;
