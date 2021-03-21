@@ -157,10 +157,22 @@ body {
     top: 0;
     transform: rotate(135deg); }
 
+.outer-container {
+  position: relative;
+  height: 100vh;
+  z-index: 1; }
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
 .header {
+  z-index: 9999;
   padding: 0 10rem;
   padding-top: 3rem;
-  background-color: #2d2e32;
   display: flex;
   flex-direction: column;
   color: #ddcebb; }
@@ -448,6 +460,7 @@ body {
   width: inherit; }
 
 .introduction {
+  z-index: 10;
   background-color: #25262a;
   min-height: 100vh;
   padding: 5rem 10rem;
@@ -497,6 +510,13 @@ body {
       flex: 1; }
       .introduction__right .info--value::after {
         content: "."; }
+      .introduction__right .info--value a {
+        transition: all 0.3s; }
+        .introduction__right .info--value a:link, .introduction__right .info--value a:visited {
+          text-decoration: none;
+          color: inherit; }
+        .introduction__right .info--value a:hover, .introduction__right .info--value a:active {
+          color: #12993d; }
     .introduction__right > * {
       margin: 10px; }
   .introduction-title {
@@ -738,7 +758,11 @@ body {
         font-weight: 500; }
         .footer__top--left h4 a {
           text-decoration: none;
-          color: #12993d; }
+          color: #12993d;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s; }
+          .footer__top--left h4 a:hover {
+            border-bottom: 3px solid #12993d; }
     .footer__top--right {
       display: flex;
       flex-direction: column;
@@ -765,6 +789,13 @@ body {
         color: #ddcebb;
         font-size: 2rem;
         margin-bottom: 1rem; }
+        .footer__top--right .email a {
+          transition: all 0.3s; }
+          .footer__top--right .email a:link, .footer__top--right .email a:visited {
+            text-decoration: none;
+            color: inherit; }
+          .footer__top--right .email a:hover, .footer__top--right .email a:active {
+            color: #12993d; }
   .footer__bottom {
     flex: 0.4;
     display: flex;
@@ -914,12 +945,13 @@ body {
         color: #ddcebb;
         text-transform: uppercase;
         font-size: 2rem;
-        border-bottom: 3px solid;
-        transition: all 0.2s;
-        border-bottom: 3px solid transparent; }
+        padding: 10px;
+        background-image: linear-gradient(120deg, transparent 50%, white 50%);
+        background-size: 250%;
+        transition: all 0.4s; }
         .skills .container--right .skills-container p:hover {
-          color: #12993d;
-          border-bottom: 3px solid #12993d; }
+          background-position: 100%;
+          color: #060608; }
 
 .section--skills-title {
   margin-bottom: 5rem;

@@ -1,4 +1,5 @@
 .introduction {
+  z-index: 10;
   background-color: #25262a;
   min-height: 100vh;
   // overflow: hidden;
@@ -85,6 +86,20 @@
         // background-color: peru;
         &::after {
           content: ".";
+        }
+
+        & a {
+          transition: all 0.3s;
+          &:link,
+          &:visited {
+            text-decoration: none;
+            color: inherit;
+          }
+
+          &:hover,
+          &:active {
+            color: $green-light;
+          }
         }
       }
     }
