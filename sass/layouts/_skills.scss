@@ -1,18 +1,37 @@
 .skills {
   height: 100vh;
-  // width: 100%;
-  // background-color: crimson;
-  background-color: #25262a;
-  padding: 5rem 15rem;
-  //   display: flex;
 
-  @include respond(tab-port) {
+  // width: 100%;
+  // background-color: lightseagreen;
+  // background-color: rebeccapurple;
+  // background-color: #25262a;
+  // background-color: red;
+  padding: 5rem 15rem;
+  // display: flex;
+  // overflow: hidden;
+
+  @include respond(tab-land) {
     height: auto;
+    // height: min-content;
     // padding: 1rem 15rem;
+    // padding: 10rem;
     padding: 0;
+    padding-left: 5rem;
+    // margin: 0;
+    margin: 5rem 8rem;
+  }
+
+  @include respond(phone) {
+    margin: 5rem 0;
+  }
+
+  @include respond(mid-big-desktop) {
+    height: auto;
   }
   .container {
+    // background-color: midnightblue;
     display: flex;
+    // background-color: peru;
     // overflow: hidden;
     // padding-top: 5rem;
     // background-color: royalblue;
@@ -20,6 +39,7 @@
       flex-direction: column;
       // padding: 0 3rem;
     }
+
     &--left {
       flex: 1;
       @include respond(tab-port) {
@@ -30,6 +50,9 @@
         margin: 3rem 5rem;
 
         // background-color: cadetblue;
+      }
+      @include respond(phone) {
+        margin: 0;
       }
 
       .timeline_wrapper {
@@ -97,6 +120,13 @@
         margin-bottom: 5rem;
       }
 
+      @include respond(phone) {
+        margin: 0;
+        padding: 0;
+        gap: 5px;
+        // background-color: rebeccapurple;
+      }
+
       .skills-container {
         // background-color: blue;
         // border: 3px solid red;
@@ -116,7 +146,11 @@
           // transition: all 0.2s;
           // border-bottom: 3px solid transparent;
 
-          background-image: linear-gradient(120deg, transparent 50%, white 50%);
+          background-image: linear-gradient(
+            120deg,
+            transparent 50%,
+            $green-light 50%
+          );
           background-size: 250%;
           transition: all 0.4s;
 
@@ -148,5 +182,10 @@
     margin-bottom: 0;
     margin-left: 5rem;
     margin-right: 5rem;
+
+    @include respond(phone) {
+      margin: 0;
+      margin-bottom: 50px;
+    }
   }
 }

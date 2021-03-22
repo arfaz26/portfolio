@@ -160,7 +160,14 @@ body {
 .outer-container {
   position: relative;
   height: 100vh;
-  z-index: 1; }
+  z-index: 1;
+  background-color: #2d2e32; }
+  @media (max-width: 75em) {
+    .outer-container {
+      height: auto; } }
+  @media (min-width: 103.12em) {
+    .outer-container {
+      height: auto; } }
 
 #particles-js {
   position: absolute;
@@ -468,21 +475,25 @@ body {
   @media (max-width: 75em) {
     .introduction {
       flex-direction: column;
-      padding: 0; } }
+      padding: 0 10rem;
+      min-height: auto; } }
   @media (max-width: 37.5em) {
     .introduction {
       padding: 0;
+      min-height: auto; } }
+  @media (min-width: 103.12em) {
+    .introduction {
       min-height: auto; } }
   .introduction__left {
     flex: 1; }
     @media (max-width: 75em) {
       .introduction__left {
-        padding-right: 25rem; } }
+        margin: 4rem; } }
     @media (max-width: 37.5em) {
       .introduction__left {
         padding-right: 0; } }
     .introduction__left > * {
-      margin: 50px; }
+      margin: 80px 0; }
   .introduction__right {
     color: #ddcebb;
     flex: 1;
@@ -490,12 +501,16 @@ body {
     padding-right: 5rem;
     display: flex;
     flex-direction: column; }
-    @media (max-width: 56.25em) {
+    @media (max-width: 75em) {
       .introduction__right {
         padding: 0;
-        margin: 5rem; } }
+        margin: 4rem;
+        height: auto; } }
     .introduction__right > * {
       padding-bottom: 30px; }
+    @media (max-width: 75em) {
+      .introduction__right > * {
+        padding-bottom: 0; } }
     .introduction__right .info p {
       margin: 10px 0;
       display: flex;
@@ -519,17 +534,19 @@ body {
           color: #12993d; }
     .introduction__right > * {
       margin: 10px; }
+    @media (max-width: 37.5em) {
+      .introduction__right > * {
+        margin: 5px; } }
   .introduction-title {
     color: grey;
     font-size: 1.4rem;
     margin-top: 50px; }
+    @media (max-width: 75em) {
+      .introduction-title {
+        margin-top: 0; } }
   .introduction-intro {
     font-size: 5rem;
     font-weight: 500; }
-  .introduction-quote {
-    font-size: 2.8rem;
-    font-weight: 400;
-    font-style: italic; }
   .introduction-detail {
     color: grey;
     font-size: 1.5rem; }
@@ -888,12 +905,19 @@ body {
 
 .skills {
   height: 100vh;
-  background-color: #25262a;
   padding: 5rem 15rem; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 75em) {
     .skills {
       height: auto;
-      padding: 0; } }
+      padding: 0;
+      padding-left: 5rem;
+      margin: 5rem 8rem; } }
+  @media (max-width: 37.5em) {
+    .skills {
+      margin: 5rem 0; } }
+  @media (min-width: 103.12em) {
+    .skills {
+      height: auto; } }
   .skills .container {
     display: flex; }
     @media (max-width: 56.25em) {
@@ -904,6 +928,9 @@ body {
       @media (max-width: 56.25em) {
         .skills .container--left {
           margin: 3rem 5rem; } }
+      @media (max-width: 37.5em) {
+        .skills .container--left {
+          margin: 0; } }
       .skills .container--left .timeline_wrapper {
         border-left: 2px dotted gray; }
         .skills .container--left .timeline_wrapper .item {
@@ -941,12 +968,17 @@ body {
           margin-left: 5rem;
           margin-right: 5rem;
           margin-bottom: 5rem; } }
+      @media (max-width: 37.5em) {
+        .skills .container--right {
+          margin: 0;
+          padding: 0;
+          gap: 5px; } }
       .skills .container--right .skills-container p {
         color: #ddcebb;
         text-transform: uppercase;
         font-size: 2rem;
         padding: 10px;
-        background-image: linear-gradient(120deg, transparent 50%, white 50%);
+        background-image: linear-gradient(120deg, transparent 50%, #12993d 50%);
         background-size: 250%;
         transition: all 0.4s; }
         .skills .container--right .skills-container p:hover {
@@ -966,3 +998,7 @@ body {
       margin-bottom: 0;
       margin-left: 5rem;
       margin-right: 5rem; } }
+  @media (max-width: 56.25em) and (max-width: 37.5em) {
+    .section--skills-title {
+      margin: 0;
+      margin-bottom: 50px; } }

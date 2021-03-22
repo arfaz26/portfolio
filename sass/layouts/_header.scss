@@ -2,9 +2,20 @@
   position: relative;
   height: 100vh;
   z-index: 1;
-  // background-color: $primary;
+  background-color: $primary;
 
+  // padding: 0 10rem;
+  // // overflow: hidden;
+  // padding-top: 3rem;
   // background-color: black;
+
+  @include respond(tab-land) {
+    height: auto;
+  }
+
+  @include respond(mid-big-desktop) {
+    height: auto;
+  }
 }
 
 #particles-js {
@@ -32,7 +43,7 @@
 .header {
   z-index: 9999;
   padding: 0 10rem;
-  // overflow: hidden;
+  // // overflow: hidden;
   padding-top: 3rem;
   // height: 100vh;
   // height: 100vh;
@@ -261,6 +272,16 @@
     @include respond(phone-cut) {
       padding-top: 8rem;
     }
+
+    // .wrapper {
+    //   height: 40rem;
+    //   width: 40rem;
+    //   // background-color: red;
+    //   display: none;
+    //   border-radius: 50%;
+
+    // .content-left
+    // }
 
     &__image {
       height: 40rem;
