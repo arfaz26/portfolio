@@ -1,23 +1,11 @@
 .skills {
   height: 100vh;
-
-  // width: 100%;
-  // background-color: lightseagreen;
-  // background-color: rebeccapurple;
-  // background-color: #25262a;
-  // background-color: red;
   padding: 5rem 15rem;
-  // display: flex;
-  // overflow: hidden;
 
   @include respond(tab-land) {
     height: auto;
-    // height: min-content;
-    // padding: 1rem 15rem;
-    // padding: 10rem;
     padding: 0;
     padding-left: 5rem;
-    // margin: 0;
     margin: 5rem 8rem;
   }
 
@@ -29,39 +17,24 @@
     height: auto;
   }
   .container {
-    // background-color: midnightblue;
     display: flex;
-    // background-color: peru;
-    // overflow: hidden;
-    // padding-top: 5rem;
-    // background-color: royalblue;
     @include respond(tab-port) {
       flex-direction: column;
-      // padding: 0 3rem;
     }
 
     &--left {
       flex: 1;
       @include respond(tab-port) {
-        // margin-bottom: 2rem;
-        // margin-left: 5rem;
-        // margin-right: 5rem;
-        // margin-top: 4rem;
         margin: 3rem 5rem;
-
-        // background-color: cadetblue;
       }
       @include respond(phone) {
         margin: 0;
       }
 
       .timeline_wrapper {
-        // background-color: greenyellow;
-        // margin-bottom: 200px;
         border-left: 2px dotted gray;
 
         .item {
-          //   background-color: fuchsia;
           color: $text-color;
           font-size: 1.6rem;
           font-weight: 400;
@@ -92,27 +65,15 @@
     &--right {
       padding-right: 20px;
       flex: 1;
-      //   background-color: salmon;
       display: grid;
 
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(5, 1fr);
-      // justify-content: start;
       justify-items: start;
-      // background-color: brown;
-      //   justify-content: end;
-      //   align-items: flex-end;
 
       gap: 30px;
 
-      // @include respond(tab-land) {
-      //   justify-items: start;
-      //   // gap: 1px;
-      // }
-
       @include respond(tab-port) {
-        // margin: 50px;
-
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         margin-left: 5rem;
@@ -124,27 +85,16 @@
         margin: 0;
         padding: 0;
         gap: 5px;
-        // background-color: rebeccapurple;
       }
 
       .skills-container {
-        // background-color: blue;
-        // border: 3px solid red;
-        // clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-        // text-align: center;
+        cursor: pointer;
         p {
-          // background-color: blue;
-
           color: $text-color;
-          //   color: $green-light;
 
           text-transform: uppercase;
           font-size: 2rem;
           padding: 10px;
-          // border-radius: 2px;
-          // border-bottom: 3px solid;
-          // transition: all 0.2s;
-          // border-bottom: 3px solid transparent;
 
           background-image: linear-gradient(
             120deg,
@@ -155,9 +105,6 @@
           transition: all 0.4s;
 
           &:hover {
-            // color: $green-light;
-            // border-bottom: 3px solid $green-light;
-
             background-position: 100%;
             color: $primary-black;
           }
@@ -168,7 +115,6 @@
 }
 
 .section--skills-title {
-  // background-color: lawngreen;
   margin-bottom: 5rem;
   text-transform: uppercase;
   color: $text-color;
@@ -178,7 +124,6 @@
 
   @include respond(tab-port) {
     padding-top: 5rem;
-    // background-color: burlywood;
     margin-bottom: 0;
     margin-left: 5rem;
     margin-right: 5rem;

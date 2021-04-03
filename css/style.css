@@ -199,6 +199,7 @@ body {
       .header__nav > *:not(:last-child) {
         margin-right: 1rem; }
     .header__nav--user-name {
+      cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -831,6 +832,7 @@ body {
           flex-direction: column;
           padding-bottom: 2rem; } }
       .footer__bottom--left .my-name {
+        cursor: pointer;
         font-size: 2.5rem;
         font-weight: 700;
         transition: all 0.3s; }
@@ -859,8 +861,10 @@ body {
       @media (max-width: 56.25em) {
         .footer__bottom--right {
           display: none; } }
-  .footer .nav__icon-container:hover .icon-social {
-    fill: #12993d; }
+  .footer .nav__icon-container {
+    cursor: pointer; }
+    .footer .nav__icon-container:hover .icon-social {
+      fill: #12993d; }
   .footer .icon-social {
     height: 20px;
     width: 20px;
@@ -976,17 +980,19 @@ body {
           margin: 0;
           padding: 0;
           gap: 5px; } }
-      .skills .container--right .skills-container p {
-        color: #ddcebb;
-        text-transform: uppercase;
-        font-size: 2rem;
-        padding: 10px;
-        background-image: linear-gradient(120deg, transparent 50%, #12993d 50%);
-        background-size: 250%;
-        transition: all 0.4s; }
-        .skills .container--right .skills-container p:hover {
-          background-position: 100%;
-          color: #060608; }
+      .skills .container--right .skills-container {
+        cursor: pointer; }
+        .skills .container--right .skills-container p {
+          color: #ddcebb;
+          text-transform: uppercase;
+          font-size: 2rem;
+          padding: 10px;
+          background-image: linear-gradient(120deg, transparent 50%, #12993d 50%);
+          background-size: 250%;
+          transition: all 0.4s; }
+          .skills .container--right .skills-container p:hover {
+            background-position: 100%;
+            color: #060608; }
 
 .section--skills-title {
   margin-bottom: 5rem;

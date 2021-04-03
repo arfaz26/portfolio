@@ -1,11 +1,7 @@
 .footer {
-  // height: 50vh;
-  // overflow: hidden;
-  // background-color: chocolate;
   background-color: #25262a;
   display: flex;
   flex-direction: column;
-  //   padding: 5rem;
   padding: 5rem 10rem;
 
   @include respond(tab-port) {
@@ -14,27 +10,19 @@
 
   &__top {
     flex: 1;
-    // background-color: royalblue;
     display: flex;
 
     @include respond(tab-port) {
       flex-direction: column;
       margin: 3rem 5rem;
-      // justify-content: center;
       align-items: stretch;
-      // margin-bottom: 3rem;
-      // & > * {
-      //   // background-color: darkgreen;
-      // }
     }
     &--left {
-      // background-color: chocolate;
       flex: 1;
       display: flex;
       flex-direction: column;
       padding: 0 2rem;
       justify-content: center;
-      // align-items: center;
       color: $text-color;
 
       @include respond(tab-port) {
@@ -56,11 +44,8 @@
           }
         }
       }
-
-      // background-color: sandybrown;
     }
     &--right {
-      // background-color: crimson;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -69,16 +54,9 @@
 
       @include respond(tab-port) {
         padding: 0;
-        // background-color: red;
-
-        // margin-bottom: 13rem;
-        // & > * {
-        //   margin-bottom: 10rem;
-        // }
       }
 
       & .title {
-        // background-color: blue;
         font-size: 1.3rem;
         color: grey;
         margin-bottom: 1rem;
@@ -91,7 +69,6 @@
 
         @include respond(tab-port) {
           font-weight: 500;
-          // color: $text-color;
         }
       }
       & .email {
@@ -114,41 +91,29 @@
         }
       }
       flex: 0.6;
-      // background-color: seagreen;
     }
   }
   &__bottom {
     flex: 0.4;
-    // background-color: saddlebrown;
-    // background-color: #25262a;
 
     display: flex;
     margin-top: 2rem;
     &--left {
-      // background-color: darkorchid;
       padding: 0 2rem;
       flex: 1;
       display: flex;
       color: $text-color;
       align-items: center;
-      // background-color: #25262a;
-
-      // background-color: lavenderblush;
       @include respond(tab-port) {
         flex-direction: column;
         padding-bottom: 2rem;
-        // justify-content: center;
-        // align-items: center;
-        // align-items: center;
       }
 
       .my-name {
-        // display: flex;
-        // background-color: lightblue;
+        cursor: pointer;
         font-size: 2.5rem;
         font-weight: 700;
         transition: all 0.3s;
-        // align-items: center;
 
         @include respond(tab-port) {
           margin-bottom: 2rem;
@@ -157,7 +122,6 @@
             content: "Build with ❤️ by ";
             font-weight: 400;
             color: grey;
-            // background-color: #25262a;
           }
         }
 
@@ -171,45 +135,29 @@
       }
 
       h5 {
-        // background-color: lavenderblush;
-        // display: flex;
         font-size: 1.2rem;
-        // align-items: center;
-        // background-color: lightcoral;
         color: grey;
         margin-left: 4rem;
       }
-
-      // background-color: lemonchiffon;
     }
 
     &--right {
-      // background-color: darkgreen;
       padding: 0 2rem;
       flex: 0.6;
-      // background-color: lightcoral;
       display: flex;
       align-items: center;
-      // justify-content: space-evenly;
       :not(:first-child) {
         margin-left: 5rem;
       }
 
-      // & > * {
-      //   margin-bottom: 1rem;
-      // }
-
       @include respond(tab-port) {
         display: none;
-        // background-color: red;
-        // visibility: hidden;
       }
     }
   }
 
   .nav__icon-container {
-    // background-color: red;
-    // margin: 0rem 2rem;
+    cursor: pointer;
     &:hover .icon-social {
       fill: $green-light;
     }
@@ -220,29 +168,21 @@
     width: 20px;
     fill: white;
     transition: all 0.2s;
-
-    // background-color: lawngreen;
   }
 
   &-nav {
-    // background-color: darkgoldenrod;
     display: flex;
     flex-direction: column;
     color: $text-color;
     padding: 0 5px;
     font-weight: 600;
-    // flex: 1;
 
     :not(:last-child) {
       margin-bottom: 1rem;
     }
 
     @include respond(tab-port) {
-      // background-color: darkblue;
-      // flex-direction: row;
       display: none;
-      // justify-items: end;
-      // align-items: center;
     }
 
     &__title {
@@ -263,20 +203,3 @@
     }
   }
 }
-
-// .copyright {
-//   background-color: red;
-//   padding: 0;
-// }
-
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// // background-color: red;
-// flex-grow: 0.2;
-// font-size: 2rem;
-// font-weight: 700;
-
-// &:hover {
-//   color: $green-light;
-// }
